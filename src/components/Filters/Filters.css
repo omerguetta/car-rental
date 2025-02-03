@@ -1,0 +1,126 @@
+.filters {
+    width: 360px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-right: 1px solid #F3F5F7;
+    padding: 32px;
+    position: absolute;
+    top: 124px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filter-group {
+    margin-bottom: 32px;
+}
+
+.filters h3 {
+    width: 104px;
+    height: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.12px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #90A3BF;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.filters label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #4A5568;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.filters input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3563E9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #FFFFFF;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.filters input[type="checkbox"]:checked {
+    background-color: #3563E9;
+    box-shadow: 0px 4px 10px rgba(53, 99, 233, 0.3);
+    border: none;
+}
+
+.filters input[type="checkbox"]:checked::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%) rotate(45deg);
+}
+
+.filters input[type="range"] {
+    width: 100%;
+    margin-top: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    outline: none;
+    background: #E2E8F0;
+    position: relative;
+}
+
+.filters input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #3563E9 0%, #E2E8F0 0%);
+}
+
+.filters input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3563E9;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-top: -6px;
+}
+
+.filters span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #718096;
+}
+
+.filter-price {
+    width: 296px;
+    height: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: justify;
+    color: #596780;
+    display: block;
+    margin-top: 8px;
+}
