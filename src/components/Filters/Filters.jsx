@@ -15,9 +15,13 @@ const Filters = ({ onFilterChange }) => {
     }, [selectedTypes, selectedCapacities, price]);
 
     const handleTypeChange = (type) => {
-        setSelectedTypes((prev) =>
-            prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
-        );
+        if (selectedTypes.includes(type)) {
+            if (selectedTypes.length > 1) {
+                setSelectedTypes(selectedTypes.filter(t => t !== type));
+            }
+        } else {
+            setSelectedTypes([...selectedTypes, type]);
+        }
     };
 
     const handleCapacityChange = (capacity) => {
