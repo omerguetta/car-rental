@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Filters from "../Filters/Filters";
 import CarGrid from "../CarGrid/CarGrid";
 import Header from "../Header/Header";
@@ -16,14 +16,16 @@ const HomePage = () => {
     maxPrice: 100,
   });
 
+  useEffect(() => {
+    filterCars(searchQuery, showFavorites, filters);
+  }, [searchQuery, showFavorites, filters, favorites]);
+
   const handleSearch = (query) => {
     setSearchQuery(query);
-    filterCars(query, showFavorites, filters);
   };
 
   const handleFavoritesToggle = () => {
     setShowFavorites((prev) => !prev);
-    filterCars(searchQuery, !showFavorites, filters);
   };
 
   const toggleFavorite = (carId) => {
@@ -31,41 +33,39 @@ const HomePage = () => {
       ...prevFavorites,
       [carId]: !prevFavorites[carId],
     }));
-    filterCars(searchQuery, showFavorites, filters);
   };
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
-    filterCars(searchQuery, showFavorites, newFilters);
   };
 
-  const filterCars = (query, showFavorites, filters) => {
+  const filterCars = () => {
     let filteredCars = carsData.map(car => ({
       ...car,
       favorite: favorites[car.id] || false,
     }));
 
-    if (query.length >= 2) {
-      filteredCars = filteredCars.filter((car) =>
-        car.name.toLowerCase().includes(query.toLowerCase())
+    if (searchQuery.length >= 2) {
+      filteredCars = filteredCars.filter(car =>
+        car.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
-    }
+    } else {
+      if (showFavorites) {
+        filteredCars = filteredCars.filter(car => car.favorite);
+      }
 
-    if (showFavorites) {
-      filteredCars = filteredCars.filter((car) => car.favorite);
-    }
+      if (filters.types.length > 0) {
+        filteredCars = filteredCars.filter(car => filters.types.includes(car.type));
+      }
 
-    if (filters.types.length > 0) {
-      filteredCars = filteredCars.filter((car) => filters.types.includes(car.type));
-    }
+      if (filters.capacities.length > 0) {
+        filteredCars = filteredCars.filter(car =>
+          filters.capacities.includes(car.capacity.toString())
+        );
+      }
 
-    if (filters.capacities.length > 0) {
-      filteredCars = filteredCars.filter((car) =>
-        filters.capacities.includes(car.capacity.toString())
-      );
+      filteredCars = filteredCars.filter(car => car.price <= filters.maxPrice);
     }
-
-    filteredCars = filteredCars.filter((car) => car.price <= filters.maxPrice);
 
     setCars(filteredCars);
   };
