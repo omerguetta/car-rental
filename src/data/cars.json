@@ -1,5 +1,5 @@
 [
-    {
+  {
       "id": 1,
       "name": "Koenigsegg",
       "type": "Sport",
@@ -9,27 +9,137 @@
       "transmission": "Manual",
       "price": 99,
       "favorite": true
-    },
-    {
+  },
+  {
       "id": 2,
       "name": "Nissan GT-R",
       "type": "Sport",
-      "image": "SportCar.png",
+      "image": "SportCar1.png",
       "capacity": 2,
       "fuel": "80L",
       "transmission": "Manual",
       "price": 82,
       "favorite": false
-    },
-    {
+  },
+  {
       "id": 3,
       "name": "Rolls-Royce",
       "type": "Sport",
-      "image": "SportCar.png",
+      "image": "SportCar2.png",
       "capacity": 4,
       "fuel": "70L",
       "transmission": "Manual",
       "price": 96,
       "favorite": false
-    }
-  ]
+  },
+  {
+      "id": 4,
+      "name": "All New Rush",
+      "type": "SUV",
+      "image": "SportCar3.png",
+      "capacity": 6,
+      "fuel": "70L",
+      "transmission": "Manual",
+      "price": 76,
+      "favorite": false
+  },
+  {
+      "id": 5,
+      "name": "CR - V",
+      "type": "SUV",
+      "image": "SportCar4.png",
+      "capacity": 6,
+      "fuel": "80L",
+      "transmission": "Manual",
+      "price": 80,
+      "favorite": true
+  },
+  {
+      "id": 6,
+      "name": "All New Terios",
+      "type": "SUV",
+      "image": "SportCar5.png",
+      "capacity": 6,
+      "fuel": "90L",
+      "transmission": "Manual",
+      "price": 74,
+      "favorite": false
+  },
+  {
+      "id": 7,
+      "name": "MG ZX Exclusive",
+      "type": "Hatchback",
+      "image": "SportCar6.png",
+      "capacity": 4,
+      "fuel": "70L",
+      "transmission": "Electric",
+      "price": 76,
+      "favorite": false
+  },
+  {
+      "id": 8,
+      "name": "New MG ZS",
+      "type": "SUV",
+      "image": "SportCar7.png",
+      "capacity": 6,
+      "fuel": "80L",
+      "transmission": "Manual",
+      "price": 80,
+      "favorite": false
+  },
+  {
+      "id": 9,
+      "name": "MG ZX Excite",
+      "type": "Hatchback",
+      "image": "SportCar8.png",
+      "capacity": 4,
+      "fuel": "90L",
+      "transmission": "Electric",
+      "price": 74,
+      "favorite": true
+  },
+  {
+      "id": 10,
+      "name": "Toyota Camry",
+      "type": "Sedan",
+      "image": "SportCar.png",
+      "capacity": 5,
+      "fuel": "65L",
+      "transmission": "Automatic",
+      "price": 85,
+      "favorite": false
+  },
+  {
+      "id": 11,
+      "name": "Honda Accord",
+      "type": "Sedan",
+      "image": "SportCar1.png",
+      "capacity": 5,
+      "fuel": "60L",
+      "transmission": "Automatic",
+      "price": 83,
+      "favorite": false
+  },
+  {
+      "id": 12,
+      "name": "Ford Mustang",
+      "type": "Coupe",
+      "image": "SportCar2.png",
+      "capacity": 4,
+      "fuel": "75L",
+      "transmission": "Manual",
+      "price": 95,
+      "favorite": false
+  },
+  {
+      "id": 13,
+      "name": "BMW X5",
+      "type": "SUV",
+      "image": "SportCar3.png",
+      "capacity": 6,
+      "fuel": "85L",
+      "transmission": "Automatic",
+      "price": 90,
+      "favorite": false
+  }
+]
