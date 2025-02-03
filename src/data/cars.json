@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "name": "Koenigsegg",
+      "type": "Sport",
+      "image": "SportCar.png",
+      "capacity": 2,
+      "fuel": "90L",
+      "transmission": "Manual",
+      "price": 99,
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "name": "Nissan GT-R",
+      "type": "Sport",
+      "image": "SportCar.png",
+      "capacity": 2,
+      "fuel": "80L",
+      "transmission": "Manual",
+      "price": 82,
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "name": "Rolls-Royce",
+      "type": "Sport",
+      "image": "SportCar.png",
+      "capacity": 4,
+      "fuel": "70L",
+      "transmission": "Manual",
+      "price": 96,
+      "favorite": false
+    }
+  ]
