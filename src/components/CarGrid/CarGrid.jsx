@@ -13,7 +13,12 @@ const CarGrid = ({ cars, onToggleFavorite, favorites }) => {
       <div className="car-grid">
         {cars.length > 0 ? (
           cars.map((car) => (
-            <CarCard key={car.id} car={{ ...car, favorite: favorites[car.id] || false }} onToggleFavorite={onToggleFavorite} />
+            <CarCard 
+              key={car.id} 
+              car={{ ...car, favorite: favorites[car.id] || false }} 
+              onToggleFavorite={onToggleFavorite}
+              imageLink={`/car/${car.id}`} // 🔹 נוסיף את הקישור לעמוד הרכב
+            />
           ))
         ) : (
           <p className="loading-text">No cars available</p>
